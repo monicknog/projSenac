@@ -20,5 +20,6 @@
       </font>
     </Label>
     <TextField fx:id="ctBusca" layoutX="14.0" layoutY="72.0" onAction="#pesquisar" onKeyReleased="#pesquisar" prefWidth="622.0" promptText="Buscar Aluno" text="" />
+    <Button fx:id="btAtualiza" layoutX="41.0" layoutY="350.0" mnemonicParsing="false" onAction="#atualizar" text="Atualizar" />
   </children>
 </AnchorPane>
