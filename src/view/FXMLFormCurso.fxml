@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="231.99997792968497" prefWidth="470.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="view.FormCurso">
+  <children>
+    <AnchorPane layoutX="0.0" layoutY="0.0" minWidth="470.0" prefHeight="232.0" prefWidth="470.0">
+      <children>
+        <Label layoutX="183.0" layoutY="21.0" text="CADASTRO DE CURSO" />
+        <TextField fx:id="ctNomeCurso" layoutX="29.0" layoutY="69.0" prefWidth="427.0" promptText="Nome do Curso" />
+        <Button fx:id="btCadastraCurso" layoutX="369.0" layoutY="110.0" mnemonicParsing="false" onAction="#salvarCurso" text="CADASTRAR" />
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>

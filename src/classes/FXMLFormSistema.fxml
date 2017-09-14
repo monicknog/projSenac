@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="506.0" prefWidth="570.0" style="-fx-background-color : #E8E8E8;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="classes.FXMLFormSistemaController">
+  <children>
+    <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+    <MenuBar layoutX="0.0" layoutY="0.0" prefHeight="26.0" prefWidth="570.0" style="">
+      <menus>
+        <Menu mnemonicParsing="false" text="Abrir">
+          <items>
+            <Menu mnemonicParsing="false" text="Cadastro">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#abrirCadastroAluno" text="Alunos" />
+                <MenuItem mnemonicParsing="false" onAction="#abrirCadastroCursos" text="Cursos" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Relatorios">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#abrirListaAlunos" text="Alunos" />
+                <MenuItem mnemonicParsing="false" onAction="#abrirListaCursos" text="Cursos" />
+              </items>
+            </Menu>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Sistema">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Sair" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </children>
+</AnchorPane>

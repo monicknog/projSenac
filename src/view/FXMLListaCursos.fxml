@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="view.FormListaCursos">
+  <children>
+    <TableView fx:id="tbListaCursos" layoutX="14.0" layoutY="102.0" prefHeight="202.0" prefWidth="580.0" />
+    <Button fx:id="btCadastro" layoutX="163.0" layoutY="349.0" mnemonicParsing="false" onAction="#abrirCadastroCurso" text="Cadastro" />
+    <Button fx:id="btEditar" layoutX="275.0" layoutY="349.0" mnemonicParsing="false" onAction="#alterarCadastrCurso" prefWidth="68.0" text="Editar" />
+    <Button fx:id="btExcluir" layoutX="391.0" layoutY="349.0" mnemonicParsing="false" onAction="#excluirRegistro" prefWidth="68.0" text="Excluir" />
+    <Button fx:id="btSair" layoutX="549.0" layoutY="349.0" mnemonicParsing="false" onAction="#fechar" text="SAIR" />
+    <Label alignment="CENTER" layoutX="197.0" layoutY="14.0" prefHeight="39.0" prefWidth="228.0" text="LISTA DE CURSOS" />
+    <TextField fx:id="ctBusca" layoutX="14.0" layoutY="72.0" onKeyPressed="#pesquisar" prefWidth="580.0" promptText="Buscar Curso" text="" />
+  </children>
+</AnchorPane>

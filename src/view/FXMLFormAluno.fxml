@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="cbSexo" minHeight="207.9998779296875" prefHeight="245.9998779296875" prefWidth="425.9998779296875" style="-fx-background-color : while;" styleClass="null" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="view.FormAluno">
+  <children>
+    <TextField fx:id="ctNomeAluno" layoutX="13.0" layoutY="78.0" prefWidth="396.5" />
+    <Label layoutX="13.0" layoutY="54.0" prefWidth="52.0" text="Nome">
+      <font>
+        <Font name="System Bold" size="14.0" fx:id="x1" />
+      </font>
+      <textFill>
+        <Color blue="1.000" green="0.400" red="0.448" fx:id="x2" />
+      </textFill>
+    </Label>
+    <ComboBox fx:id="cbSexoAluno" layoutX="244.0" layoutY="146.0" prefHeight="21.0" prefWidth="120.0" promptText="Selecione">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Feminino" />
+          <String fx:value="Masculino" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label font="$x1" layoutX="244.0" layoutY="117.0" text="Sexo" textFill="$x2" />
+    <TextField fx:id="ctIdadeAluno" layoutX="14.0" layoutY="145.0" prefWidth="152.0" />
+    <Label font="$x1" layoutX="14.0" layoutY="120.0" text="Idade" textFill="$x2" />
+    <Button fx:id="btSalvar" font="$x1" layoutX="164.0" layoutY="197.0" mnemonicParsing="false" onAction="#salvarAluno" prefHeight="25.0" prefWidth="96.0" text="Salvar" />
+    <Label layoutX="65.0" layoutY="12.0" text="CADASTRO DE ALUNOS" textFill="RED">
+      <font>
+        <Font name="System Bold" size="25.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>
