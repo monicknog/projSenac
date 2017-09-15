@@ -1,7 +1,10 @@
 package view;
 
 import controller.Aluno;
+import controller.Responsavel;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -24,11 +27,11 @@ public class FormAluno implements Initializable {
     @FXML
     private AnchorPane pane;
     @FXML
-    TextField ctNomeAluno;
+    TextField ctNomeAluno, ctNomeResponsavel1, ctNomeResponsavel2, ctTel1, ctTel2;
     @FXML
     TextField ctIdadeAluno;
     @FXML
-    ComboBox cbSexoAluno;
+    ComboBox cbSexoAluno, cbParentesco1, cbParentesco2;
 
     public static Aluno a = new Aluno();
     public AlunoDAO aDAO = new AlunoDAO();
@@ -36,6 +39,8 @@ public class FormAluno implements Initializable {
     public static String op = "inserir";
     
     static Stage stage;
+    
+    List<Responsavel> responsaveis = new ArrayList<>();
 
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLFormAluno.fxml"));
@@ -54,6 +59,12 @@ public class FormAluno implements Initializable {
             a.setNomeAluno(ctNomeAluno.getText());
             a.setIdadeAluno(Integer.parseInt(ctIdadeAluno.getText()));
             a.setSexoAluno(cbSexoAluno.getSelectionModel().getSelectedItem().toString());
+            
+            responsaveis.add(new Responsavel(ctNomeResponsavel1.getText(),cbParentesco1.getSelectionModel().getSelectedItem().toString(),ctTel1.getText()));
+            responsaveis.add(new Responsavel(ctNomeResponsavel2.getText(),cbParentesco2.getSelectionModel().getSelectedItem().toString(),ctTel2.getText()));
+            
+            
+            a.setResponsaveis(responsaveis);
             aDAO.salvar(a);
             sucess();
         } catch (Exception e) {

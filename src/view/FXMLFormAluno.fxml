@@ -10,18 +10,18 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" fx:id="cbSexo" minHeight="207.9998779296875" prefHeight="245.9998779296875" prefWidth="425.9998779296875" style="-fx-background-color : while;" styleClass="null" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="view.FormAluno">
+<AnchorPane id="AnchorPane" minHeight="207.9998779296875" prefHeight="466.0" prefWidth="642.9998779296875" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="view.FormAluno">
   <children>
-    <TextField fx:id="ctNomeAluno" layoutX="13.0" layoutY="78.0" prefWidth="396.5" />
-    <Label layoutX="13.0" layoutY="54.0" prefWidth="52.0" text="Nome">
+    <TextField fx:id="ctNomeAluno" layoutX="13.0" layoutY="78.0" prefHeight="22.0" prefWidth="606.0" />
+    <Label layoutX="13.0" layoutY="54.0" prefWidth="49.999908447265625" text="Nome">
       <font>
-        <Font name="System Bold" size="14.0" fx:id="x1" />
+        <Font name="System Bold" size="15.0" fx:id="x3" />
       </font>
       <textFill>
         <Color blue="1.000" green="0.400" red="0.448" fx:id="x2" />
       </textFill>
     </Label>
-    <ComboBox fx:id="cbSexoAluno" layoutX="244.0" layoutY="146.0" prefHeight="21.0" prefWidth="120.0" promptText="Selecione">
+    <ComboBox fx:id="cbSexoAluno" layoutX="244.0" layoutY="146.0" minHeight="15.999900000002526" prefHeight="21.0" prefWidth="120.0" promptText="Selecione">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Feminino" />
@@ -29,14 +29,56 @@
         </FXCollections>
       </items>
     </ComboBox>
-    <Label font="$x1" layoutX="244.0" layoutY="117.0" text="Sexo" textFill="$x2" />
-    <TextField fx:id="ctIdadeAluno" layoutX="14.0" layoutY="145.0" prefWidth="152.0" />
-    <Label font="$x1" layoutX="14.0" layoutY="120.0" text="Idade" textFill="$x2" />
-    <Button fx:id="btSalvar" font="$x1" layoutX="164.0" layoutY="197.0" mnemonicParsing="false" onAction="#salvarAluno" prefHeight="25.0" prefWidth="96.0" text="Salvar" />
-    <Label layoutX="65.0" layoutY="12.0" text="CADASTRO DE ALUNOS" textFill="RED">
+    <Label font="$x3" layoutX="244.0" layoutY="117.0" text="Sexo" textFill="$x2" />
+    <TextField fx:id="ctIdadeAluno" layoutX="14.0" layoutY="145.0" prefHeight="22.0" prefWidth="152.0" />
+    <Label font="$x3" layoutX="14.0" layoutY="120.0" text="Idade" textFill="$x2" />
+    <Button fx:id="btSalvar" layoutX="523.0" layoutY="418.0" mnemonicParsing="false" onAction="#salvarAluno" prefHeight="25.0" prefWidth="96.0" text="Salvar">
+      <font>
+        <Font name="System Bold" size="14.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Label layoutX="164.0" layoutY="14.0" text="CADASTRO DE ALUNOS" textFill="RED">
       <font>
         <Font name="System Bold" size="25.0" />
       </font>
     </Label>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="158.0" layoutX="22.0" layoutY="245.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.9" width="597.9998779296875" />
+    <TextField id="ctNomeResponsavel" fx:id="ctNomeResponsavel1" layoutX="40.0" layoutY="278.0" prefWidth="287.0" />
+    <TextField fx:id="ctTel1" layoutX="339.0" layoutY="281.0" prefWidth="152.0" promptText="" />
+    <ComboBox fx:id="cbParentesco1" layoutX="508.0" layoutY="283.0" prefHeight="21.0" prefWidth="96.0" promptText="Selecione...">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Pai" />
+          <String fx:value="Mãe" />
+          <String fx:value="Tutor" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <TextField fx:id="ctNomeResponsavel2" layoutX="41.0" layoutY="344.0" prefWidth="280.0" />
+    <TextField fx:id="ctTel2" layoutX="340.0" layoutY="346.0" prefWidth="152.0" />
+    <ComboBox fx:id="cbParentesco2" layoutX="509.0" layoutY="348.0" prefHeight="21.0" prefWidth="96.0" promptText="Selecione...">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Pai" />
+          <String fx:value="Mãe" />
+          <String fx:value="Tutor" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label layoutX="23.0" layoutY="223.0" minHeight="21.0" prefHeight="21.0" prefWidth="135.0" text="RESPONSÁVEIS" textFill="radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 100.0px 100.0px, radius 200.0px, 0xff0000ff 0.0%, 0x0000ffff 30.0%, 0x000000ff 100.0%)">
+      <font>
+        <Font size="15.0" />
+      </font>
+    </Label>
+    <Label layoutX="40.0" layoutY="259.0" text="Nome">
+      <font>
+        <Font name="System Bold" size="12.0" fx:id="x4" />
+      </font>
+    </Label>
+    <Label font="$x4" layoutX="340.0" layoutY="262.0" text="Telefone" />
+    <Label font="$x4" layoutX="515.0" layoutY="262.0" prefWidth="83.0" text="Parentesco" />
+    <Label font="$x4" layoutX="41.0" layoutY="325.0" text="Nome" />
+    <Label font="$x4" layoutX="341.0" layoutY="327.0" text="Telefone" />
+    <Label font="$x4" layoutX="516.0" layoutY="327.0" prefWidth="83.0" text="Parentesco" />
   </children>
 </AnchorPane>

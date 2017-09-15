@@ -1,9 +1,12 @@
 package controller;
 
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 @Entity
 
@@ -14,6 +17,10 @@ public class Aluno implements Serializable {
     private String nomeAluno;
     private int idadeAluno;
     private String sexoAluno;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "aluno")
+    @JoinColumn(name = "aluno_idAluno")
+    List<Responsavel> responsaveis;
 
     public Aluno() {
 
@@ -49,6 +56,14 @@ public class Aluno implements Serializable {
 
     public void setSexoAluno(String sexoAluno) {
         this.sexoAluno = sexoAluno;
+    }
+
+    public List<Responsavel> getResponsaveis() {
+        return responsaveis;
+    }
+
+    public void setResponsaveis(List<Responsavel> responsaveis) {
+        this.responsaveis = responsaveis;
     }
 
 }
