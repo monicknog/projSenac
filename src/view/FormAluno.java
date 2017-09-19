@@ -60,8 +60,8 @@ public class FormAluno implements Initializable {
             a.setIdadeAluno(Integer.parseInt(ctIdadeAluno.getText()));
             a.setSexoAluno(cbSexoAluno.getSelectionModel().getSelectedItem().toString());
             
-            responsaveis.add(new Responsavel(ctNomeResponsavel1.getText(),cbParentesco1.getSelectionModel().getSelectedItem().toString(),ctTel1.getText()));
-            responsaveis.add(new Responsavel(ctNomeResponsavel2.getText(),cbParentesco2.getSelectionModel().getSelectedItem().toString(),ctTel2.getText()));
+            responsaveis.add(new Responsavel(ctNomeResponsavel1.getText(),cbParentesco1.getSelectionModel().getSelectedItem().toString(),ctTel1.getText(), a));
+            responsaveis.add(new Responsavel(ctNomeResponsavel2.getText(),cbParentesco2.getSelectionModel().getSelectedItem().toString(),ctTel2.getText(), a));
             
             
             a.setResponsaveis(responsaveis);

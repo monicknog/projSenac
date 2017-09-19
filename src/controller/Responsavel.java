@@ -9,6 +9,7 @@ import javax.persistence.*;
 public class Responsavel implements Serializable{
     
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idResponsavel;
     private String nomeResponsavel;
     private String parentescoResponsavel;
@@ -20,7 +21,8 @@ public class Responsavel implements Serializable{
     public Responsavel() {
     }
 
-    public Responsavel(String nomeResponsavel, String parentescoResponsavel, String telResponsavel) {
+    public Responsavel(String nomeResponsavel, String parentescoResponsavel, String telResponsavel, Aluno aluno) {
+        this.aluno = aluno;
         this.nomeResponsavel = nomeResponsavel;
         this.parentescoResponsavel = parentescoResponsavel;
         this.telResponsavel = telResponsavel;
